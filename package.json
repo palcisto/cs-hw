@@ -1,0 +1,19 @@
+{
+  "name": "crowdstrike",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "inferno": "^3.10.1",
+    "inferno-component": "^3.10.1",
+    "inferno-scripts": "5.0.0",
+    "node-sass-chokidar": "^0.0.3"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start": "inferno-scripts start",
+    "build": "inferno-scripts build",
+    "test": "inferno-scripts test --env=jsdom",
+    "eject": "inferno-scripts eject"
+  }
+}
