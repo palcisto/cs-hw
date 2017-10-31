@@ -1,3 +1,13 @@
+# Crowdstrike UI Developer Test
+
+To run the app, please follow this steps:
+
+1. Make sure you have Node version 6+
+2. Run `yarn install`
+3. Then run `yarn start` boot the app, which will also open the app in your browser
+4. Optionally you can run `yarn build-css` to build the css, or run `yarn watch-css` to watch all SCSS files for changes.
+
+
 This project was bootstrapped with [Create Inferno App](https://github.com/infernojs/create-inferno-app).
 
 Below you will find some information on how to perform common tasks.<br>
