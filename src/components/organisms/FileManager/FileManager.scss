@@ -1,0 +1,108 @@
+@import '../../../shared-css/_variables.scss';
+@import '../../../shared-css/_mixins.scss';
+
+.FileManager {
+
+  table {
+    border: $base-border;
+    border-collapse: collapse;
+    color: $grey-dark;
+    width: 100%;
+
+    tr {
+      &:not(:last-of-type) {
+        td {
+          border-bottom: 1px solid #dfdfdf;
+        }
+      }
+
+      td,
+      th {
+        text-align: left;
+      }
+
+      th {
+        border-bottom: 1px solid #dfdfdf;
+        font-size: 1.6rem;
+        font-weight: 400;
+        padding: ($baseline * 4) ($baseline * 2) ($baseline * 2);
+      }
+
+      td {
+        padding: $baseline * 2;
+      }
+
+      &:hover {
+        background-color: #f4f4f4;
+      }
+    }
+  }
+}
+
+.FileRow {
+  @include modifier('Selected') {
+    background-color: #ececec;
+  }
+
+  @include element('Path') {
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @include element('Status') {
+    text-transform: capitalize;
+  }
+}
+
+.TableActions {
+  align-items: center;
+  display: flex;
+
+  @include element('SelectAll') {
+    margin-right: $baseline * 4;
+  }
+
+  @include element('SelectedCount') {
+    font-size: 1.8rem;
+    margin-right: $baseline * 10;
+  }
+
+  @include element('DownloadButton') {
+    button {
+      background-color: $white;
+      border: 0;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 1.8rem;
+      padding: $baseline ($baseline * 2);
+      transition: background-color $base-transition;
+
+      &:hover {
+        background-color: $grey-light;
+      }
+    }
+  }
+}
+
+.Panel {
+  box-shadow: 0 1px 3px rgba($black, .15);
+
+  @include element('Header') {
+    padding: ($baseline * 3) ($baseline * 2);
+  }
+
+  @include element('Content') {}
+}
+
+.StatusIndicator {
+  border-radius: 50%;
+  display: inline-block;
+  height: 1.6rem;
+  width: 1.6rem;
+
+  @include modifier('available') {
+    background-color: $color-success;
+  }
+}

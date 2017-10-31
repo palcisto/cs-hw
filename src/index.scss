@@ -1,0 +1,20 @@
+@import './shared-css/_normalize.scss';
+@import './shared-css/_variables.scss';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  color: $grey-dark;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif;
+}
