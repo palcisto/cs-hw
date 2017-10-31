@@ -2,7 +2,6 @@
 @import '../../../shared-css/_mixins.scss';
 
 .FileManager {
-
   table {
     border: $base-border;
     border-collapse: collapse;
@@ -44,6 +43,10 @@
     background-color: #ececec;
   }
 
+  @include element('Checkbox') {
+    width: 2.4rem;
+  }
+
   @include element('Path') {
     div {
       display: flex;
@@ -80,29 +83,9 @@
       transition: background-color $base-transition;
 
       &:hover {
-        background-color: $grey-light;
+        background-color: $grey-x-light;
       }
     }
   }
 }
 
-.Panel {
-  box-shadow: 0 1px 3px rgba($black, .15);
-
-  @include element('Header') {
-    padding: ($baseline * 3) ($baseline * 2);
-  }
-
-  @include element('Content') {}
-}
-
-.StatusIndicator {
-  border-radius: 50%;
-  display: inline-block;
-  height: 1.6rem;
-  width: 1.6rem;
-
-  @include modifier('available') {
-    background-color: $color-success;
-  }
-}

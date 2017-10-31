@@ -1,0 +1,7 @@
+.StatusIndicator {
+  border-radius: 50%;
+  display: inline-block;
+  height: 1.6rem;
+  width: 1.6rem; }
+  .StatusIndicator--available {
+    background-color: #74D245; }

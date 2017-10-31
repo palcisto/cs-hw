@@ -1,0 +1,13 @@
+@import '../../../shared-css/_variables.scss';
+@import '../../../shared-css/_mixins.scss';
+
+.StatusIndicator {
+  border-radius: 50%;
+  display: inline-block;
+  height: 1.6rem;
+  width: 1.6rem;
+
+  @include modifier('available') {
+    background-color: $color-success;
+  }
+}

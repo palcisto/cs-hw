@@ -1,0 +1,4 @@
+.Panel {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); }
+  .Panel__Header {
+    padding: 1.2rem 0.8rem; }

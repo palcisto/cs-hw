@@ -1,0 +1,10 @@
+@import '../../../shared-css/_variables.scss';
+@import '../../../shared-css/_mixins.scss';
+
+.Panel {
+  box-shadow: 0 1px 3px rgba($black, .15);
+
+  @include element('Header') {
+    padding: ($baseline * 3) ($baseline * 2);
+  }
+}
